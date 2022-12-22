@@ -1,0 +1,38 @@
+<template>
+    <lightning-button variant="brand" label="Refresh" title="" onclick={getAccLst}></lightning-button>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Account Name</th>
+                    <th>Type</th>
+                    <th>Site</th>
+                    <th>Rating</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={accList} for:item="acc">
+                    <tr key={acc.Id}>
+                        <td>{acc.Name}</td>
+                        <td>{acc.Type}</td>
+                        <td>{acc.Site}</td>
+                        <td>{acc.Rating}</td>
+                        <td>{acc.Phone}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+        </div>
+        <div style="height: 300px">
+            <lightning-datatable
+                    key-field=id
+                    data={accList}
+                    columns={columns}
+                    hide-checkbox-column=true
+                    show-row-number-column=true
+                    onrowaction={handleRowAction}
+                    >
+                    </lightning-datatable>
+        </div>
+</template>

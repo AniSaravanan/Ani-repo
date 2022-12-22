@@ -1,0 +1,24 @@
+<aura:component controller="AccountCreate" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="acc" type="Account" default="{'sObject':'Account'}"/>
+    
+    <div class="slds-grid slds-grid_pull-padded-medium">
+    <div class="slds-col slds-p-horizontal_medium">
+        <lightning:input type="text" name="accName" label="Account Name" value="{!v.acc.Name}" onChange="{!c.changeFiled}"/>    
+         </div>
+         <div class="slds-col slds-p-horizontal_medium">
+             <lightning:input type="text" name="accPhone" label="AccountPhone" value="{!v.acc.Phone}" onChange="{!c.changeFiled}"/> 
+       
+         </div>
+             <div class="slds-col slds-p-horizontal_medium">
+                 <lightning:input type="text" name="accFax" label="Fax" value="{!v.acc.Fax}" onChange="{!c.changeFiled}"/>
+       
+         </div>
+                 <div class="slds-col slds-p-horizontal_medium">
+                     <lightning:input type="text" name="accEmail" label="Email" value="{!v.acc.Website}" onChange="{!c.changeFiled}"/> 
+       
+         </div>
+    </div>
+    <lightning:button variant="Neutral" label="Create Account" title="Account Data" Disabled="true" onclick="{!c.createAccRec}" /><br/>
+               
+</aura:component>

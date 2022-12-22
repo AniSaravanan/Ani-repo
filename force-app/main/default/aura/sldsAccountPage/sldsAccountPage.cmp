@@ -1,0 +1,29 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 
+    <div class="slds-grid slds-wrap">       
+        <div class="slds-text-title">New Account</div>
+  <div class="slds-col slds-size_1-of-2">
+    <lightning:input name="AC" label="Account Name" />
+  </div>
+  <div class="slds-col slds-size_1-of-2">
+    <lightning:input name="input1" label="Account Number" />
+  </div>
+  <div class="slds-col slds-size_1-of-2" >
+    <lightning:input name="input1" label="Type" />
+  </div>
+  <div class="slds-col slds-size_1-of-2">
+    <lightning:input name="input1" label="Industry" />
+  </div>
+      <div class="slds-col slds-size_1-of-2">
+    <lightning:input name="input1" label="Phone" />
+        </div>        
+        
+        <div class="slds-col slds-size_1-of-2">
+    <lightning:input name="input1" label="Annual Revenue" />
+  </div>
+         <div class="slds-col slds-size_1-of-2">
+    <lightning:input name="input1" label="Billing Address" />
+  </div>
+         </div> 
+
+</aura:component>

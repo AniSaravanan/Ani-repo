@@ -1,0 +1,18 @@
+<apex:page controller="AccountCustomController1" >
+    <apex:form >
+        <apex:sectionHeader title="Account Edit" Subtitle="new Account"/>
+        <apex:pageBlock title="Account Edit" mode="edit" tabstyle="Account">
+            <apex:pageBlockButtons dir="LTR">
+                <apex:commandButton action="{!save}" value="save"/>
+                <apex:commandButton action="{!save}" value="save & new"/>
+                <apex:commandButton action="{!cancel}" value="cancel"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Account Information" columns="2" collapsible="True">
+                <apex:inputTextarea value="{!acc.name}"/>
+                 <apex:inputTextarea value="{!acc.site}"/>
+                 <apex:inputTextarea value="{!acc.type}"/>
+                 <apex:inputTextarea value="{!acc.accountNumber}"/>                                 
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,11 @@
+<template>
+    <lightning-card  title="Data Binding with Getter">
+      
+        <p class="slds-var-m-bottom_x-large">
+            <lightning-input name="firstname" label="First Name" onchange={handlechange}></lightning-input>
+            <lightning-input name="lastname" label="Last Name" onchange={handlechange}></lightning-input>                      
+        </p>  
+        
+        <lightning-button variant="brand" label="send" title={uppercasedFullname} onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button> 
+    </lightning-card>
+</template>
