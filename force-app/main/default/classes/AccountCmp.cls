@@ -3,6 +3,8 @@ public class AccountCmp {
     public static List<Account> getAccount(){
         List<Account> lstacc = [select id,name,Phone,Industry,type,site,Rating from Account limit 10];
         return lstacc;
+
+        
     } 
     @AuraEnabled(cacheable=true)
     public static List<Contact> getContact(){
